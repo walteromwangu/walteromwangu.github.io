@@ -1,203 +1,1173 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>walteromwangu Portfolio</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Simple line icons-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
-        <nav id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="#page-top">walteromwangu</a></li>
-                <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
-                <li class="sidebar-nav-item"><a href="#about">About</a></li>
-                <li class="sidebar-nav-item"><a href="#services">Services</a></li>
-                <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
-                <li class="sidebar-nav-item"><a href="#contact">Contacts</a></li>
-            </ul>
-        </nav>
-        <!-- Header-->
-        <header class="masthead d-flex align-items-center">
-            <div class="container px-4 px-lg-5 text-center">
-                <h1 class="mb-1">walteromwangu</h1>
-                <h3 class="mb-5"><em>Cyber Security & Network Specialist</em></h3>
-                <a class="btn btn-primary btn-xl" href="#about">Find Out More about walter
-                </a>
-            </div>
-        </header>
-        <!-- About-->
-        <section class="content-section bg-light" id="about">
-            <div class="container px-4 px-lg-5 text-center">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-10">
-                        <h2>Cyber Security & Network Specialist</h2>
-                        <p class="lead mb-5">
-                            Protecting systems, securing networks, and simplifying technology solutions for modern businesses.
 
-I am a Cyber Security & Network Specialist with hands-on experience in information security operations, network administration, vulnerability assessment, firewall management, and enterprise IT support. Skilled in security monitoring, access control, penetration testing, ERP support, and network infrastructure configuration, I help organizations strengthen security while maintaining reliable operations.
+<head>
 
-My technical background includes Windows Server, Linux administration, VLANs, VPNs, Sophos Firewall technologies, SIEM monitoring, and infrastructure troubleshooting. I focus on practical cybersecurity solutions, clear communication, and proactive support that helps businesses reduce risk and improve operational efficiency.
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-From network security to system support and cybersecurity awareness, I am committed to building secure, stable, and efficient IT environments.
-                            <a a>
-                            !
-                        </p>
-                        <a class="btn btn-dark btn-xl" href="#services">What We Offer</a>
-                    </div>
-                </div>
+<title>Walter Omwangu • Cybersecurity Analyst • Resources & Tools</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+--bg:#050816;
+--card:#0f172a;
+--accent:#00f0ff;
+--accent2:#8b5cf6;
+--text:#f8fafc;
+--muted:#94a3b8;
+--border:rgba(255,255,255,0.08);
+--card-hover:rgba(0,240,255,0.08);
+--tool-bg:#0a0f1c;
+}
+
+body{
+font-family:'Space Grotesk',sans-serif;
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+}
+
+/* ========================================= */
+/* BACKGROUND EFFECTS */
+/* ========================================= */
+
+body::before{
+content:'';
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(circle,var(--accent2),transparent 70%);
+top:-250px;
+right:-250px;
+opacity:.15;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(circle,var(--accent),transparent 70%);
+bottom:-250px;
+left:-250px;
+opacity:.12;
+z-index:-1;
+}
+
+/* ========================================= */
+/* TERMINAL LOADER */
+/* ========================================= */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:#020617;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999999;
+animation:fadeLoader 4s forwards;
+}
+
+.terminal-loader{
+font-family:monospace;
+color:#00ff95;
+line-height:2;
+font-size:1rem;
+text-align:left;
+padding:2rem;
+}
+
+@keyframes fadeLoader{
+0%{opacity:1;visibility:visible;}
+90%{opacity:1;}
+100%{opacity:0;visibility:hidden;}
+}
+
+/* ========================================= */
+/* NAVBAR */
+/* ========================================= */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+z-index:999;
+backdrop-filter:blur(20px);
+background:rgba(5,8,22,.75);
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.nav-container{
+max-width:1200px;
+margin:auto;
+padding:1rem 2rem;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-weight:700;
+font-size:1rem;
+letter-spacing:1px;
+}
+
+.logo span{
+color:var(--accent);
+}
+
+.nav-links{
+display:flex;
+gap:2rem;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--muted);
+transition:.3s;
+font-size:.95rem;
+}
+
+.nav-links a:hover{
+color:var(--accent);
+}
+
+/* ========================================= */
+/* GENERAL */
+/* ========================================= */
+
+section{
+max-width:1200px;
+margin:auto;
+padding:6rem 2rem;
+}
+
+.section-title{
+font-size:2.7rem;
+margin-bottom:3rem;
+position:relative;
+}
+
+.section-title::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-10px;
+width:120px;
+height:4px;
+border-radius:20px;
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+}
+
+/* ========================================= */
+/* HERO */
+/* ========================================= */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:4rem;
+align-items:center;
+width:100%;
+}
+
+.terminal-window{
+background:#0d1117;
+border-radius:24px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 0 25px rgba(0,240,255,.08), 0 0 50px rgba(139,92,246,.08);
+}
+
+.terminal-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1rem;
+background:#161b22;
+font-size:.85rem;
+}
+
+.terminal-buttons{
+display:flex;
+gap:.5rem;
+}
+
+.terminal-buttons span{
+width:12px;
+height:12px;
+border-radius:50%;
+display:block;
+}
+
+.red{background:#ff5f56;}
+.yellow{background:#ffbd2e;}
+.green{background:#27c93f;}
+
+.terminal-body{
+padding:2rem;
+}
+
+.typing-line{
+font-family:monospace;
+color:#00ff95;
+margin-bottom:1rem;
+}
+
+.hero h1{
+font-size:4rem;
+line-height:1.1;
+margin:1.5rem 0 1rem;
+}
+
+.hero h1 span{
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.glow-text{
+color:#00f0ff;
+text-shadow:0 0 10px rgba(0,240,255,.5), 0 0 20px rgba(0,240,255,.2);
+}
+
+.hero-description{
+color:var(--muted);
+line-height:1.9;
+margin:2rem 0;
+}
+
+.hero-buttons{
+display:flex;
+gap:1rem;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:0.8rem 1.6rem;
+border-radius:14px;
+text-decoration:none;
+color:white;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+position:relative;
+overflow:hidden;
+font-weight:500;
+display:inline-flex;
+align-items:center;
+gap:8px;
+cursor:pointer;
+}
+
+.btn::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);
+transition:.6s;
+}
+
+.btn:hover::before{
+left:100%;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,var(--accent),var(--accent2));
+}
+
+.btn-secondary{
+background:transparent;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+.terminal-stats{
+display:flex;
+gap:1rem;
+margin:2rem 0;
+flex-wrap:wrap;
+}
+
+.stat-box{
+flex:1;
+min-width:120px;
+padding:1rem;
+background:rgba(255,255,255,.03);
+border-radius:16px;
+border:1px solid rgba(255,255,255,.08);
+text-align:center;
+}
+
+.stat-box h2{
+font-size:2rem;
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.stat-box p{
+color:var(--muted);
+font-size:.9rem;
+}
+
+.hero-image{
+position:relative;
+display:flex;
+justify-content:center;
+}
+
+.image-glow{
+position:absolute;
+width:350px;
+height:350px;
+background:radial-gradient(circle,rgba(0,240,255,.25),transparent 70%);
+filter:blur(60px);
+z-index:-1;
+}
+
+.profile-image{
+width:330px;
+height:330px;
+object-fit:cover;
+border-radius:30px;
+border:3px solid rgba(255,255,255,.08);
+box-shadow:0 0 30px rgba(0,240,255,.12);
+background:linear-gradient(135deg,#1a2a3a,#0a0f1c);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:5rem;
+}
+
+/* ========================================= */
+/* CYBER BANNER */
+/* ========================================= */
+
+.cyber-banner{
+overflow:hidden;
+border-top:1px solid rgba(255,255,255,.05);
+border-bottom:1px solid rgba(255,255,255,.05);
+padding:1rem 0;
+background:rgba(0,0,0,0.3);
+}
+
+.banner-track{
+display:flex;
+gap:4rem;
+width:max-content;
+animation:scrollBanner 25s linear infinite;
+font-weight:700;
+letter-spacing:2px;
+}
+
+.banner-track span{
+color:#00f0ff;
+white-space:nowrap;
+}
+
+@keyframes scrollBanner{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* ========================================= */
+/* CARDS (general) */
+/* ========================================= */
+
+.about-grid,
+.skills-grid,
+.projects-grid,
+.cert-grid,
+.dashboard-grid,
+.metrics-grid,
+.interests-grid,
+.tools-grid,
+.resource-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:2rem;
+}
+
+.card,
+.skill,
+.project,
+.cert-card,
+.dashboard-card,
+.metric-card,
+.interest-card,
+.tool-card{
+background:rgba(15,23,42,.7);
+border:1px solid rgba(255,255,255,.08);
+padding:2rem;
+border-radius:24px;
+transition:.4s;
+backdrop-filter:blur(12px);
+}
+
+.card:hover,
+.skill:hover,
+.project:hover,
+.cert-card:hover,
+.dashboard-card:hover,
+.metric-card:hover,
+.interest-card:hover,
+.tool-card:hover{
+transform:translateY(-10px);
+border-color:rgba(0,240,255,.35);
+box-shadow:0 0 30px rgba(0,240,255,.12);
+}
+
+.card p,
+.skill p,
+.project p,
+.cert-card p,
+.dashboard-card p,
+.interest-card p{
+color:var(--muted);
+line-height:1.8;
+}
+
+/* ========================================= */
+/* INTERESTS SPECIFIC */
+/* ========================================= */
+
+.interest-card h3{
+color:var(--accent);
+margin-bottom:1rem;
+font-size:1.5rem;
+}
+
+.interest-list{
+list-style:none;
+margin-top:1rem;
+}
+
+.interest-list li{
+margin-bottom:0.8rem;
+padding-left:1.5rem;
+position:relative;
+color:var(--muted);
+}
+
+.interest-list li::before{
+content:'▹';
+position:absolute;
+left:0;
+color:var(--accent);
+}
+
+.profile-badge{
+display:inline-block;
+background:rgba(0,240,255,0.1);
+padding:0.3rem 0.8rem;
+border-radius:40px;
+font-size:0.8rem;
+color:var(--accent);
+margin-top:1rem;
+border:1px solid rgba(0,240,255,0.2);
+}
+
+/* ========================================= */
+/* TOOLS & RESOURCES */
+/* ========================================= */
+
+.tool-card h4{
+color:#00f0ff;
+margin-bottom:0.5rem;
+font-size:1.2rem;
+}
+
+.tool-card p{
+font-size:0.9rem;
+margin-bottom:0.75rem;
+}
+
+.tool-tag{
+display:inline-block;
+background:rgba(139,92,246,0.2);
+border-radius:20px;
+padding:0.2rem 0.7rem;
+font-size:0.7rem;
+color:#c4b5fd;
+margin-top:0.5rem;
+margin-right:0.3rem;
+}
+
+.resource-subtitle{
+font-size:1.8rem;
+margin:2rem 0 1rem 0;
+color:var(--accent2);
+position:relative;
+display:inline-block;
+}
+
+/* ========================================= */
+/* TIMELINE */
+/* ========================================= */
+
+.timeline{
+position:relative;
+margin-top:4rem;
+}
+
+.timeline::before{
+content:'';
+position:absolute;
+left:20px;
+top:0;
+width:3px;
+height:100%;
+background:linear-gradient(var(--accent),var(--accent2));
+}
+
+.timeline-item{
+position:relative;
+padding-left:70px;
+margin-bottom:4rem;
+}
+
+.timeline-dot{
+position:absolute;
+left:10px;
+top:10px;
+width:22px;
+height:22px;
+border-radius:50%;
+background:var(--accent);
+}
+
+.timeline-content{
+background:rgba(15,23,42,.7);
+padding:2rem;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.timeline-content h4{
+margin:.5rem 0 1rem;
+color:var(--accent);
+}
+
+/* ========================================= */
+/* PROJECTS */
+/* ========================================= */
+
+.project-top{
+height:180px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:4rem;
+border-radius:18px;
+margin-bottom:1.5rem;
+background:linear-gradient(135deg,#00f0ff22,#8b5cf622);
+}
+
+.project-links{
+margin-top:1.5rem;
+}
+
+.project-links a{
+text-decoration:none;
+color:var(--accent);
+}
+
+/* ========================================= */
+/* DASHBOARD */
+/* ========================================= */
+
+.dashboard-card .dashboard-icon{
+height:180px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:4rem;
+border-radius:18px;
+margin-bottom:1.5rem;
+background:linear-gradient(135deg,#00f0ff22,#8b5cf622);
+}
+
+/* ========================================= */
+/* CONTACT SECTION */
+/* ========================================= */
+
+.contact-section {
+text-align: center;
+background: radial-gradient(circle at 30% 10%, rgba(0,240,255,0.03), transparent);
+}
+
+.contact-sub {
+max-width: 600px;
+margin: 0 auto 3rem auto;
+color: var(--muted);
+font-size: 1.1rem;
+}
+
+.contact-grid {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1.8rem;
+margin: 2rem 0 3rem;
+}
+
+.contact-card {
+background: rgba(15, 23, 42, 0.6);
+backdrop-filter: blur(16px);
+border: 1px solid rgba(255, 255, 255, 0.06);
+border-radius: 32px;
+padding: 1.5rem 2rem;
+width: 240px;
+transition: all 0.25s ease;
+text-decoration: none;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 12px;
+}
+
+.contact-card:hover {
+transform: translateY(-8px);
+border-color: var(--accent);
+background: rgba(0, 240, 255, 0.05);
+}
+
+.contact-icon {
+font-size: 2.5rem;
+background: linear-gradient(135deg, var(--accent), var(--accent2));
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+
+.contact-card h3 {
+font-size: 1.25rem;
+font-weight: 600;
+color: var(--text);
+}
+
+.contact-card p {
+color: var(--muted);
+font-size: 0.85rem;
+}
+
+.handle {
+color: var(--accent);
+font-family: monospace;
+font-size: 0.9rem;
+margin-top: 4px;
+}
+
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
+
+footer{
+text-align:center;
+padding:2rem;
+border-top:1px solid rgba(255,255,255,.05);
+color:var(--muted);
+}
+
+/* ========================================= */
+/* ANIMATIONS */
+/* ========================================= */
+
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+::-webkit-scrollbar{
+width:10px;
+}
+::-webkit-scrollbar-track{
+background:#020617;
+}
+::-webkit-scrollbar-thumb{
+background:linear-gradient(180deg,var(--accent),var(--accent2));
+border-radius:20px;
+}
+
+/* ========================================= */
+/* MOBILE */
+/* ========================================= */
+
+@media(max-width:900px){
+.hero-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+.hero h1{
+font-size:3rem;
+}
+.hero-buttons,
+.terminal-stats,
+.contact-links{
+justify-content:center;
+}
+.nav-links{
+display:none;
+}
+.profile-image{
+width:260px;
+height:260px;
+}
+.contact-card {
+width: 100%;
+max-width: 260px;
+}
+.section-title{
+font-size:2rem;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="loader">
+<div class="terminal-loader">
+<p>> Initializing SOC Analyst Portfolio...</p>
+<p>> Loading Threat Intelligence...</p>
+<p>> Connecting SIEM Dashboards...</p>
+<p>> Importing Tools & Resources...</p>
+<p>> Access Granted.</p>
+</div>
+</div>
+
+<nav>
+<div class="nav-container">
+<div class="logo">root@walter:<span>~#</span></div>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#timeline">Timeline</a>
+<a href="#projects">Projects</a>
+<a href="#interests">Interests</a>
+<a href="#tools">Tools</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+<div class="hero-grid">
+<div class="terminal-window fade">
+<div class="terminal-header"><div class="terminal-buttons"><span class="red"></span><span class="yellow"></span><span class="green"></span></div><p>secure-shell — walter@security</p></div>
+<div class="terminal-body">
+<p class="typing-line"><span class="terminal-green">root@walter:~#</span> whoami</p>
+<h1>Walter <span>Omwangu</span></h1>
+<h3 class="glow-text">Cybersecurity Analyst • SOC Operations • Network Security</h3>
+<p class="hero-description">Hands-on cybersecurity professional and Cisco Certified Instructor with battle-tested experience across the full defense lifecycle: engineering SIEM monitoring pipelines, leading incident response, administering enterprise firewalls, conducting proactive threat hunting, and performing vulnerability assessments. As a Cisco Networking Academy Instructor, I train the next generation of network engineers in routing & switching, network security, and cyber operations — bridging the gap between enterprise defense and foundational networking excellence.</p>
+<div class="terminal-stats">
+<div class="stat-box"><h2>15+</h2><p>Security Labs</p></div>
+<div class="stat-box"><h2>18+</h2><p>Tools Mastered</p></div>
+<div class="stat-box"><h2>5+</h2><p>Enterprise Projects</p></div>
+<div class="stat-box"><h2>100+</h2><p>SIEM Hours</p></div>
+</div>
+<div class="hero-buttons">
+<a class="btn btn-primary" href="https://docs.google.com/document/d/1hQ-tQiBq2B7Fus6mX3DkcSdUrGZfR8L_Yb8Vv_F1kXw/edit?usp=sharing" >📄 Resume</a>
+<a class="btn btn-secondary" target="_blank" href="https://www.linkedin.com/in/walter-omwangu-741753232">🔗 LinkedIn</a>
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-image fade">
+
+<div class="image-glow"></div>
+
+<img
+src="assets/img/ChatGPT Image Feb 8, 2026, 04_11_35 PM.png"
+alt="Walter Omwangu"
+class="profile-image"
+/>
+
+</div>
+
+</div>
+</section>
+
+<!-- CYBER BANNER -->
+<section class="cyber-banner"><div class="banner-track"><span>SIEM MONITORING</span> <span>THREAT DETECTION</span> <span>INCIDENT RESPONSE</span> <span>FIREWALL SECURITY</span> <span>THREAT HUNTING</span> <span>VULNERABILITY MANAGEMENT</span> <span>SOC OPERATIONS</span> <span>CTF PLAYER</span> <span>CISCO INSTRUCTOR</span></div></section>
+
+<!-- ABOUT -->
+<section id="about">
+
+<h2 class="section-title fade">
+About Me
+</h2>
+
+<div class="about-grid">
+
+<div class="card fade">
+
+<p>
+
+I am Walter Omwangu, a cybersecurity and network security professional based in Nairobi, Kenya, with hands-on experience securing enterprise environments through security monitoring, incident response, infrastructure hardening, and proactive threat detection. My technical background spans SIEM monitoring, firewall administration, threat intelligence, vulnerability management, access control, and enterprise security operations.
+
+</p>
+
+</div>
+
+<div class="card fade">
+
+<p>
+
+Currently working as an Information System Security Officer, I support enterprise security initiatives by monitoring security events, strengthening access controls, conducting risk assessments, improving compliance posture, and enhancing infrastructure resilience against evolving cyber threats. My work includes security operations monitoring, firewall log analysis, ISO 27001 compliance monitoring, vulnerability remediation, and supporting business continuity through secure system design.
+</p>
+
+</div>
+<div class="card fade">
+
+<p>
+
+Beyond operations, I actively build and maintain a cybersecurity home lab environment where I simulate enterprise networks, perform attack simulations, develop detection use cases, and strengthen incident investigation capabilities using industry-standard tools and frameworks.
+I also serve as a Cisco Networking Academy Instructor, mentoring future technology professionals and contributing to cybersecurity awareness, technical training, and practical skills development.
+</p>
+
+</div>
+<div class="card fade">
+
+<h3 style="color: var(--accent); margin-bottom: 1rem;">Core Focus Areas</h3>
+
+<ul class="interest-list" style="list-style: none; padding-left: 0;">
+    <li>🔍 SOC Operations & Security Monitoring</li>
+    <li>🚨 Threat Detection & Incident Response</li>
+    <li>📊 SIEM & Log Analysis</li>
+    <li>🔥 Firewall Security & Network Defense</li>
+    <li>🛡️ Vulnerability Management</li>
+    <li>📋 ISO 27001 Security Compliance</li>
+    <li>🏢 Enterprise Infrastructure Security</li>
+    <li>🎓 Security Awareness & Technical Training</li>
+</ul>
+
+</div>
+</div>
+
+</section>
+<!-- METRICS -->
+<section>
+    <h2 class="section-title fade">Security Metrics</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        
+        <div class="fade" style="background: #0a0f1c; border-radius: 28px; padding: 2.5rem 2rem; border-left: 5px solid #00f0ff; transition: all 0.3s;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.2rem;">
+                <span style="color: #00f0ff; font-family: monospace; font-size: 1rem; letter-spacing: 1px;">security_labs</span>
+                <span style="color: #00ff95; font-family: monospace; font-size: 3rem; font-weight: 700;">15+</span>
             </div>
-        </section>
-        <!-- Services-->
-        <section class="content-section bg-primary text-white text-center" id="services">
-            <div class="container px-4 px-lg-5">
-                <div class="content-section-heading">
-                    <h3 class="text-secondary mb-0">Services</h3>
-                    <h2 class="mb-5">What We Offer</h2>
-                </div>
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-smartphone"></i></span>
-                        <h4><strong>Responsive</strong></h4>
-                        <p class="text-faded mb-0">Looks great on any screen size!</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
-                        <h4><strong>Redesigned</strong></h4>
-                        <p class="text-faded mb-0">Freshly redesigned for Bootstrap 5.</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-like"></i></span>
-                        <h4><strong>Favorited</strong></h4>
-                        <p class="text-faded mb-0">
-                            Millions of users
-                            <i class="fas fa-heart"></i>
-                            Start Bootstrap!
-                        </p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-mustache"></i></span>
-                        <h4><strong>Question</strong></h4>
-                        <p class="text-faded mb-0">I mustache you a question...</p>
-                    </div>
-                </div>
+            <div style="background: #1a1f2e; height: 8px; border-radius: 8px; margin: 1.2rem 0;">
+                <div style="width: 95%; background: linear-gradient(90deg, #00f0ff, #8b5cf6); height: 8px; border-radius: 8px;"></div>
             </div>
-        </section>
-        <!-- Callout-->
-        <section class="callout">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mx-auto mb-5">
-                    Welcome to
-                    <em>your</em>
-                    next website!
-                </h2>
-                <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a>
-            </div>
-        </section>
-        <!-- Portfolio-->
-        <section class="content-section" id="portfolio">
-            <div class="container px-4 px-lg-5">
-                <div class="content-section-heading text-center">
-                    <h3 class="text-secondary mb-0">Portfolio</h3>
-                    <h2 class="mb-5">Recent Projects</h2>
-                </div>
-                <div class="row gx-0">
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Stationary</div>
-                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Ice Cream</div>
-                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strawberries</div>
-                                    <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Workspace</div>
-                                    <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Call to Action-->
-        <section class="content-section bg-primary text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-                <a class="btn btn-xl btn-light me-4" href="#!">Click Me!</a>
-                <a class="btn btn-xl btn-dark" href="#!">Look at Me!</a>
-            </div>
-        </section>
-        <!-- Map-->
-        <div class="map" id="contact">
-            <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-            <br />
-            <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small>
+            <div style="color: #5a6e8a; font-size: 0.8rem; font-family: monospace; margin-top: 1rem;">ACTIVE_LABS | COMPLETION_RATE: 95%</div>
         </div>
-        <!-- Footer-->
-        <footer class="footer text-center">
-            <div class="container px-4 px-lg-5">
-                <ul class="list-inline mb-5">
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-facebook"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-twitter"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
-                    </li>
-                </ul>
-                <p class="text-muted small mb-0">Copyright &copy; Your Website 2023</p>
+
+        <div class="fade" style="background: #0a0f1c; border-radius: 28px; padding: 2.5rem 2rem; border-left: 5px solid #8b5cf6;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.2rem;">
+                <span style="color: #8b5cf6; font-family: monospace; font-size: 1rem; letter-spacing: 1px;">security_tools</span>
+                <span style="color: #00ff95; font-family: monospace; font-size: 3rem; font-weight: 700;">18+</span>
             </div>
-        </footer>
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+            <div style="background: #1a1f2e; height: 8px; border-radius: 8px; margin: 1.2rem 0;">
+                <div style="width: 85%; background: linear-gradient(90deg, #8b5cf6, #00f0ff); height: 8px; border-radius: 8px;"></div>
+            </div>
+            <div style="color: #5a6e8a; font-size: 0.8rem; font-family: monospace; margin-top: 1rem;">TOOLS_MASTERED | PROFICIENCY: 85%</div>
+        </div>
+
+        <div class="fade" style="background: #0a0f1c; border-radius: 28px; padding: 2.5rem 2rem; border-left: 5px solid #00ff95;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.2rem;">
+                <span style="color: #00ff95; font-family: monospace; font-size: 1rem; letter-spacing: 1px;">enterprise_projects</span>
+                <span style="color: #00ff95; font-family: monospace; font-size: 3rem; font-weight: 700;">5+</span>
+            </div>
+            <div style="background: #1a1f2e; height: 8px; border-radius: 8px; margin: 1.2rem 0;">
+                <div style="width: 100%; background: linear-gradient(90deg, #00ff95, #00f0ff); height: 8px; border-radius: 8px;"></div>
+            </div>
+            <div style="color: #5a6e8a; font-size: 0.8rem; font-family: monospace; margin-top: 1rem;">PRODUCTION | SUCCESS_RATE: 100%</div>
+        </div>
+
+        <div class="fade" style="background: #0a0f1c; border-radius: 28px; padding: 2.5rem 2rem; border-left: 5px solid #ff5f56;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.2rem;">
+                <span style="color: #ff5f56; font-family: monospace; font-size: 1rem; letter-spacing: 1px;">siem_hours</span>
+                <span style="color: #00ff95; font-family: monospace; font-size: 3rem; font-weight: 700;">100+</span>
+            </div>
+            <div style="background: #1a1f2e; height: 8px; border-radius: 8px; margin: 1.2rem 0;">
+                <div style="width: 90%; background: linear-gradient(90deg, #ff5f56, #8b5cf6); height: 8px; border-radius: 8px;"></div>
+            </div>
+            <div style="color: #5a6e8a; font-size: 0.8rem; font-family: monospace; margin-top: 1rem;">HANDS_ON | THREATS_DETECTED: 247</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline"><h2 class="section-title fade">Career Journey</h2><div class="timeline"><div class="timeline-item fade"><div class="timeline-dot"></div><div class="timeline-content"><h3>Education</h3><h4>KCA University • 2020 – 2024</h4><p>Bachelor of Science in Information Security & Forensics (Upper Division).</p></div></div><div class="timeline-item fade"><div class="timeline-dot"></div><div class="timeline-content"><h3>Cybersecurity Intern</h3><h4>2024</h4><p>SOC operations, security monitoring, enterprise support, and cybersecurity assessments.</p></div></div><div class="timeline-item fade"><div class="timeline-dot"></div><div class="timeline-content"><h3>Information System Security Officer</h3><h4>2025 – Present</h4><p>SIEM monitoring, incident investigations, firewall ops, enterprise infrastructure security.</p></div></div><div class="timeline-item fade"><div class="timeline-dot"></div><div class="timeline-content"><h3>Cisco Networking Academy Instructor</h3><h4>2026</h4><p>Training on networking, routing & switching, cybersecurity fundamentals.</p></div></div></div></section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2 class="section-title fade">Technical Skills</h2>
+    <div class="skills-grid">
+        
+        <div class="skill fade">
+            <h4>🔍 Security Monitoring & SIEM</h4>
+            <p>Proficient in <strong>Splunk</strong> and <strong>Wazuh</strong> for centralized log aggregation, real-time alerting, and security event correlation. Experienced in tuning detection rules, creating custom dashboards, and conducting forensic log analysis to identify suspicious activities across enterprise environments.</p>
+            <div style="margin-top: 0.8rem;">
+                <span class="tool-tag">#Splunk</span>
+                <span class="tool-tag">#Wazuh</span>
+                <span class="tool-tag">#AlertTriage</span>
+                <span class="tool-tag">#LogAnalysis</span>
+            </div>
+        </div>
+
+        <div class="skill fade">
+            <h4>🔥 Network Security & Firewall Administration</h4>
+            <p>Hands-on experience managing <strong>Sophos XG/XGS firewalls</strong> including VPN tunnel configuration (Site-to-Site & SSL), IPS/IDS policy tuning, traffic shaping, NAT rules, and secure network segmentation using VLANs and ACLs to enforce least-privilege access.</p>
+            <div style="margin-top: 0.8rem;">
+                <span class="tool-tag">#SophosFirewall</span>
+                <span class="tool-tag">#VPN</span>
+                <span class="tool-tag">#VLANs</span>
+                <span class="tool-tag">#ACLs</span>
+                <span class="tool-tag">#NAT</span>
+            </div>
+        </div>
+
+        <div class="skill fade">
+            <h4>⚔️ Penetration Testing & Vulnerability Assessment</h4>
+            <p>Skilled in conducting authorized penetration tests using <strong>Kali Linux</strong> toolset. Proficient with <strong>Nmap</strong> for network reconnaissance, <strong>Metasploit</strong> for exploit development and delivery, and <strong>Burp Suite</strong> for web application security testing. Experienced in vulnerability identification, exploitation, and remediation reporting.</p>
+            <div style="margin-top: 0.8rem;">
+                <span class="tool-tag">#KaliLinux</span>
+                <span class="tool-tag">#Nmap</span>
+                <span class="tool-tag">#Metasploit</span>
+                <span class="tool-tag">#BurpSuite</span>
+            </div>
+        </div>
+
+        <div class="skill fade">
+            <h4>💻 Systems Administration & Active Directory</h4>
+            <p>Strong foundation in enterprise systems management including <strong>Windows Server (2016/2019)</strong> and <strong>Ubuntu Linux</strong>. Experienced with <strong>VirtualBox</strong> for lab environment virtualization and <strong>Active Directory</strong> for user authentication, Group Policy Objects (GPOs), and access control management.</p>
+            <div style="margin-top: 0.8rem;">
+                <span class="tool-tag">#WindowsServer</span>
+                <span class="tool-tag">#Ubuntu</span>
+                <span class="tool-tag">#VirtualBox</span>
+                <span class="tool-tag">#ActiveDirectory</span>
+            </div>
+        </div>
+
+        <div class="skill fade">
+            <h4>📡 Network Analysis & Packet Inspection</h4>
+            <p>Proficient in <strong>Wireshark</strong> for deep packet inspection, protocol analysis, and network traffic troubleshooting. Experienced with <strong>Nagios</strong> for infrastructure monitoring and alerting. Skilled in analyzing <strong>firewall logs</strong> to identify anomalous patterns, policy violations, and potential intrusions.</p>
+            <div style="margin-top: 0.8rem;">
+                <span class="tool-tag">#Wireshark</span>
+                <span class="tool-tag">#Nagios</span>
+                <span class="tool-tag">#PacketAnalysis</span>
+                <span class="tool-tag">#FirewallLogs</span>
+            </div>
+        </div>
+
+        <div class="skill fade">
+            <h4>🚨 Security Operations & Compliance</h4>
+            <p>Experienced in <strong>threat analysis</strong> and <strong>phishing investigation</strong> as part of SOC daily operations. Knowledgeable in <strong>ISO 27001</strong> compliance framework including risk assessment, control implementation, and audit preparation. Skilled in <strong>incident response (IR)</strong> lifecycle from detection to containment, eradication, and recovery.</p>
+            <div style="margin-top: 0.8rem;">
+                <span class="tool-tag">#ThreatAnalysis</span>
+                <span class="tool-tag">#Phishing</span>
+                <span class="tool-tag">#ISO27001</span>
+                <span class="tool-tag">#IncidentResponse</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- CERTIFICATIONS -->
+<section><h2 class="section-title fade">Certifications</h2><div class="cert-grid"><div class="cert-card fade"><h3>CCNA</h3><p>Cisco Certified Network Associate</p><br><a class="btn btn-secondary" href="#" download>📜 Cert</a></div>
+<div class="cert-card fade"><h3>CEH</h3><p>Certified Ethical Hacker</p><br><a class="btn btn-secondary" href="#" download>📜 Cert</a></div>
+<div class="cert-card fade"><h3>CTIGA</h3><p>Threat Intelligence Analyst</p><br><a class="btn btn-secondary" href="#" download>📜 Cert</a></div></div></section>
+
+<!-- PROJECTS -->
+<section id="projects"><h2 class="section-title fade">Projects</h2><div class="projects-grid"><div class="project fade"><div class="project-top">🛡️</div><h3>Cybersecurity Home Lab</h3><p>Enterprise simulation: Windows Server, Ubuntu, Sophos, Kali, SIEM.</p><div class="project-links"><a target="_blank" href="#">View →</a></div></div>
+<div class="project fade"><div class="project-top">🔥</div><h3>Sophos Firewall Migration</h3><p>XG to XGS migration, VPN, IPS, segmentation.</p><div class="project-links"><a target="_blank" href="#">View →</a></div></div>
+<div class="project fade"><div class="project-top">🌐</div><h3>Core Switch & VLAN</h3><p>Layer3 switching, inter-VLAN routing, ACLs.</p><div class="project-links"><a target="_blank" href="#">View →</a></div></div></div></section>
+
+<!-- INTERESTS SECTION -->
+<section id="interests">
+<h2 class="section-title fade">What I'm Interested In</h2>
+<div class="interests-grid">
+  
+  <div class="interest-card fade">
+    <h3>📚 Teaching & Cisco Courses</h3>
+    <ul class="interest-list">
+      <li>Cisco Networking Academy (CCNA, CyberOps)</li>
+      <li>Routing & Switching fundamentals</li>
+      <li>Network security & firewall configuration</li>
+      <li>Hands-on lab design for students</li>
+      <li>Cybersecurity fundamentals & SOC awareness</li>
+      <li>Mentoring aspiring network engineers</li>
+    </ul>
+    <div class="profile-badge" style="margin-top: 1rem;">
+      🎓 Certified Cisco Instructor | ICT Authority Kenya
+    </div>
+  </div>
+
+  <div class="interest-card fade">
+    <h3>🤝 Collaboration</h3>
+    <ul class="interest-list">
+      <li>Security research projects</li>
+      <li>CTF team formations</li>
+      <li>Open-source security tools</li>
+      <li>Community initiatives</li>
+    </ul>
+  </div>
+
+  <div class="interest-card fade">
+    <h3>💼 Professional</h3>
+    <ul class="interest-list">
+      <li>Security consulting</li>
+      <li>Penetration testing engagements</li>
+      <li>Digital forensics investigations</li>
+      <li>Incident response</li>
+    </ul>
+  </div>
+
+  <div class="interest-card fade">
+    <h3>📬 General Inquiries</h3>
+    <ul class="interest-list">
+      <li>Questions about writeups</li>
+      <li>Security topics & tool recommendations</li>
+      <li>Just want to chat about cybersecurity</li>
+    </ul>
+    <div class="profile-badge">CRT: OFF | always open</div>
+  </div>
+
+</div>
+
+<div style="margin-top: 3rem; text-align: center;">
+  <h3 style="color: var(--accent); margin-bottom: 1.5rem;">🔍 Find Me Online</h3>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+    <div><span style="color:var(--accent2);">🏆 HackTheBox:</span> <strong>@7r00t</strong></div>
+    <div><span style="color:var(--accent2);">🔗 LinkedIn:</span> <strong>walter-omwangu</strong></div>
+    <div><span style="color:var(--accent2);">🐙 GitHub:</span> <strong>WalterOmwangu</strong></div>
+  </div>
+  <p style="color: var(--muted); margin-top: 1.2rem; font-size: 0.85rem;">[ CRT: OFF ] — reach out for CTFs, training, or research.</p>
+</div>
+</section>
+
+<!-- TOOLS & RESOURCES DASHBOARD -->
+<section id="tools">
+<h2 class="section-title fade">🛠️ Resources & Toolbox</h2>
+
+<h3 class="resource-subtitle fade">🎯 Hands-On Practice Platforms</h3>
+<div class="resource-grid tools-grid fade">
+  <div class="tool-card"><h4>🏴‍☠️ HackTheBox</h4><p>Advanced labs, realistic scenarios. My main playground for sharpening skills.</p><span class="tool-tag">#ActiveDirectory</span><span class="tool-tag">#Pwn</span></div>
+  <div class="tool-card"><h4>📘 TryHackMe</h4><p>Guided paths from beginner to pro. Great for structured learning.</p><span class="tool-tag">#Learning</span><span class="tool-tag">#Defense</span></div>
+  <div class="tool-card"><h4>💣 VulnHub</h4><p>Free vulnerable VMs for local boot-to-root practice.</p><span class="tool-tag">#VM</span><span class="tool-tag">#Privesc</span></div>
+  <div class="tool-card"><h4>🎓 pwn.college</h4><p>University-level binary exploitation & CTF challenges.</p><span class="tool-tag">#Exploitation</span></div>
+  <div class="tool-card"><h4>⚔️ PortSwigger Academy</h4><p>Best free resource for web security & bug bounty.</p><span class="tool-tag">#WebSecurity</span></div>
+  <div class="tool-card"><h4>🎮 OverTheWire</h4><p>Wargames for learning via command-line challenges.</p><span class="tool-tag">#Linux</span></div>
+</div>
+
+<h3 class="resource-subtitle fade">🔧 Essential Penetration Testing Tools</h3>
+<div class="tools-grid fade">
+  <div class="tool-card"><h4>🐉 Kali Linux</h4><p>Go-to pentest OS with 600+ tools.</p><span class="tool-tag">#OS</span></div>
+  <div class="tool-card"><h4>🔥 Burp Suite</h4><p>Web app testing proxy & scanner.</p><span class="tool-tag">#Proxy</span></div>
+  <div class="tool-card"><h4>💣 Metasploit</h4><p>Exploit framework for pentesting.</p><span class="tool-tag">#Framework</span></div>
+  <div class="tool-card"><h4>🎯 Nmap</h4><p>Network discovery & scanning.</p><span class="tool-tag">#Recon</span></div>
+  <div class="tool-card"><h4>📦 Impacket</h4><p>Network protocols manipulation.</p><span class="tool-tag">#Python</span></div>
+  <div class="tool-card"><h4>🔑 Mimikatz</h4><p>Credential dumping & Windows security.</p><span class="tool-tag">#PostExp</span></div>
+</div>
+
+<h3 class="resource-subtitle fade">🌳 Active Directory & Post-Exploitation</h3>
+<div class="tools-grid fade">
+  <div class="tool-card"><h4>🩸 BloodHound</h4><p>AD attack path mapping.</p><span class="tool-tag">#GraphDB</span></div>
+  <div class="tool-card"><h4>⚡ CrackMapExec</h4><p>Network pentesting swiss army knife.</p><span class="tool-tag">#AD</span></div>
+  <div class="tool-card"><h4>🎟️ Rubeus</h4><p>Kerberos abuse toolkit.</p><span class="tool-tag">#Kerberos</span></div>
+  <div class="tool-card"><h4>📜 Certipy</h4><p>Active Directory Certificate Services abuse.</p><span class="tool-tag">#PKI</span></div>
+</div>
+
+<h3 class="resource-subtitle fade">📚 Knowledge Bases & References</h3>
+<div class="tools-grid fade">
+  <div class="tool-card"><h4>MITRE ATT&CK</h4><p>Adversary tactics & techniques knowledge base.</p></div>
+  <div class="tool-card"><h4>OWASP</h4><p>Web app security top 10 & guides.</p></div>
+  <div class="tool-card"><h4>📖 HackTricks</h4><p>Comprehensive pentesting reference.</p></div>
+  <div class="tool-card"><h4>💣 PayloadsAllTheThings</h4><p>Massive collection of payloads & bypasses.</p></div>
+</div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+<h2 class="section-title fade">/connect</h2>
+<p class="contact-sub fade">Open to SOC, network security, training, or CTF collab. Reach out.</p>
+<div class="contact-grid fade">
+  <a href="mailto:walteromwangu@gmail.com" class="contact-card"><div class="contact-icon">✉️</div><h3>Email</h3><p>primary</p><span class="handle">walteromwangu@gmail.com</span></a>
+  <a href="https://www.linkedin.com/in/walter-omwangu-741753232" target="_blank" class="contact-card"><div class="contact-icon">🔗</div><h3>LinkedIn</h3><p>professional</p><span class="handle">/in/walter-omwangu</span></a>
+  <a href="https://github.com/WalterOmwangu" target="_blank" class="contact-card"><div class="contact-icon">🐙</div><h3>GitHub</h3><p>code & tools</p><span class="handle">WalterOmwangu</span></a>
+  <div class="contact-card" style="cursor:default;"><div class="contact-icon">🎮</div><h3>Discord</h3><p>quick chat</p><span class="handle">woli_63007</span><span style="font-size:0.7rem; margin-top:5px;">🎯 CTF / training</span></div>
+</div>
+<div class="hero-buttons fade" style="justify-content: center;"><a class="btn btn-primary" href="mailto:walteromwangu@gmail.com">📧 Send Message</a><a class="btn btn-secondary" href="#" download>📄 Download CV</a></div>
+</section>
+
+<footer>© 2026 Walter Omwangu — Cybersecurity Portfolio | SOC Analyst • Instructor • Resources</footer>
+
+<script>
+/* SCROLL ANIMATION */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+document.querySelectorAll('.fade').forEach(el => { observer.observe(el); });
+
+/* TERMINAL TYPE EFFECT */
+const typingLine = document.querySelector('.typing-line');
+if(typingLine) {
+  const originalText = typingLine.innerHTML;
+  typingLine.innerHTML = '';
+  let i = 0;
+  function typeEffect(){
+    if(i < originalText.length){
+      typingLine.innerHTML += originalText.charAt(i);
+      i++;
+      setTimeout(typeEffect,30);
+    }
+  }
+}
+</script>
+
+</body>
 </html>
